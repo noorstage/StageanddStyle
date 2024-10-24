@@ -1,0 +1,878 @@
+/* Import the Argent fonts */
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-bolditalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-demibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-demiboldital.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-extraboldital.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-lightitalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-regularitalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-super.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Argent';
+    src: url('assets/fonts/Fontspring-DEMO-argentcf-thinitalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Argent', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.navbar-logo img {
+    height: 130px;
+}
+
+/* Menu items */
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover {
+    color: #00b7c4;
+}
+
+/* Social icons section */
+.navbar-social {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-social img {
+    height: 24px;
+    width: 24px;
+}
+
+/* Hamburger Icon for mobile */
+.navbar-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 60vh;
+    background: url('assets\\9.JPG') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 100px; /* This offset is added to account for the fixed navbar */
+}
+
+.hero h1 {
+    font-family: 'Argent', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-family: 'Argent', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.hero-btn {
+    padding: 15px 30px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+/* About Us Section Styling */
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+.about-us h2 {
+    font-family: 'Argent', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* About Us Button - long width and color change */
+.about-btn {
+    display: inline-block;
+    padding: 20px 100px; /* Increased padding for long width */
+    background-color: #ffffff; /* Default white color */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text */
+    font-family: 'Argent', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+    background-color: #000000; /* Turn background black on hover */
+    color: #ffffff; /* Turn text white on hover */
+}
+/* General Styles */
+.staging-services {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.staging-services h2 {
+    font-family: 'Argent', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Service Item (Card) Styling */
+.service-item {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Elevates card on hover */
+}
+
+/* Figure and Image Styling */
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    max-width: 600px;
+    height: 200px; /* Fixed image size */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Heading and Text Styling */
+h3 {
+    font-family: 'Argent', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: 'Argent', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+.at-symbol {
+    font-family: 'Proxima Nova', sans-serif; /* The alternative font for @ */
+}
+
+/* Button Styling */
+.service-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+/* General Styling for Testimonials Section */
+.testimonials {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials h2 {
+    font-family: 'Argent', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Adjust slider to take full width of the page */
+.testimonial-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    margin: 0 auto;
+}
+
+.testimonial-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 30s linear infinite; /* Continuous animation */
+    position: relative;
+}
+
+/* Duplicate the content to create a seamless loop */
+.testimonial-content::after {
+    content: attr(data-text); /* Duplicates the content inside the same element */
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Testimonial items with bullet points at the start */
+.testimonial-content span {
+    display: inline-block;
+    font-family: 'Argent', sans-serif;
+    font-size: 20px;
+    padding: 0 40px;
+    position: relative;
+    padding-left: 30px; /* Add space for the bullet */
+}
+
+/* Adding bullet points at the start of testimonials */
+.testimonial-content span::before {
+    content: "\2022"; /* Unicode for bullet point */
+    font-size: 24px;
+    color: #000;
+    position: absolute;
+    left: 0; /* Place bullet point to the left of the testimonial */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically align the bullet point */
+}
+
+/* Button styling */
+.testimonial-btn {
+    display: block;
+    width: 250px;
+    margin: 40px auto;
+    padding: 15px 0;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.testimonial-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/* Keyframes for the sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(100vw); /* Start from just outside the right side */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left, disappearing after looping */
+    }
+    0% {
+        transform: translateX(100vw); /* Start from just outside the right side */
+    }
+}
+
+
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .testimonials h2 {
+        font-size: 28px;
+    }
+
+    .testimonial-content {
+        animation: slide 25s linear infinite;
+    }
+
+    .testimonial-content span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials h2 {
+        font-size: 24px;
+    }
+
+    .testimonial-content {
+        animation: slide 20s linear infinite;
+    }
+
+    .testimonial-content span {
+        font-size: 16px;
+        padding: 0 30px;
+    }
+
+    .testimonial-btn {
+        width: 200px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials h2 {
+        font-size: 20px;
+    }
+
+    .testimonial-content span {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .testimonial-btn {
+        width: 180px;
+        font-size: 14px;
+    }
+}
+
+
+/* General Styling for Portfolio Section */
+.portfolio {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-family: 'Argent', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Image grid styling */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row on larger screens */
+    gap: 0; /* No gap between the images */
+    width: 100%;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensures images cover the space equally */
+    cursor: pointer; /* Change cursor to pointer for clickable images */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row on extra small screens */
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image */
+}
+
+.modal img {
+    max-width: 90%; /* Responsive image */
+    max-height: 90%; /* Responsive image */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin: auto; /* Center the image */
+}
+
+
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #000000; /* Background color changed to black */
+}
+
+.intro-section h2 {
+    font-family: 'Argent', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Text color changed to white */
+}
+
+.intro-section p {
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #ffffff; /* Text color changed to white */
+}
+
+/* Button styling */
+.intro-btn {
+    display: inline-block;
+    padding: 20px 100px; /* Increased padding for long width */
+    background-color: #ffffff; /* Button background color is white */
+    border: 2px solid #ffffff; /* White border */
+    color: #000000; /* Black text */
+    font-family: 'Argent', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.intro-btn:hover {
+    background-color: #000000; /* Turn background black on hover */
+    color: #ffffff; /* Turn text white on hover */
+}
+.contact-section {
+    text-align: center; /* Centers the text */
+    margin: 50px 0; /* Adds space above and below the section */
+}
+
+.contact-heading {
+    font-weight: bold; /* Makes the heading bold */
+    font-size: 2.5em; /* Adjust the font size as needed */
+}
+
+.contact-info {
+    font-size: 1.2em; /* Adjust the font size for the contact info */
+    margin: 10px 0; /* Adds space between sentences */
+}
+.abt-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #f9f9f9;
+    margin-top: 70px;
+}
+
+.abt-content {
+    max-width: 50%;
+    padding: 0 20px;
+    text-align: center; /* Centers only the text content */
+}
+
+/* Heading Styling */
+.abt-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center; /* Ensures the heading is centered */
+}
+
+/* Subtext Styling */
+.abt-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: normal; /* Ensures text is not bold */
+    margin-bottom: 20px;
+    text-align: center; /* Centers the text */
+}
+
+/* Button Styling */
+.abt-button {
+    padding: 15px 50px;  /* Increased padding to make the button wider */
+    border: 2px solid #000000;  /* Black border */
+    color: #000000;  /* Initial text color: black */
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: transparent;  /* Transparent background initially */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Hover effect */
+.abt-button:hover {
+    background-color: #000000;  /* Black background on hover */
+    color: #ffffff;  /* White text on hover */
+}
+
+/* About Image */
+.abt-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .abt-section {
+        flex-direction: column; /* Stacks the text and image vertically on smaller screens */
+        padding: 70px 20px;
+    }
+
+    .abt-content, .abt-image {
+        max-width: 100%; /* Makes both text and image sections 100% width on smaller screens */
+    }
+
+    .abt-content h1 {
+        font-size: 30px;
+    }
+
+    .abt-content p {
+        font-size: 16px;
+    }
+
+    .abt-image {
+        margin-top: 20px;
+    }
+}
+
+/* About Founder Section */
+.about-founder {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-founder h2 {
+    font-family: 'Argent', serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-founder-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: left; /* Ensures text aligns to the left for better readability */
+}
+
+.founder-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.founder-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.founder-text {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.founder-text p {
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: normal; /* Ensures the text is not bold */
+}
+
+/* Adjusts layout for smaller screens */
+@media (max-width: 768px) {
+    .about-founder-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .founder-text, .founder-image {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+/* Portfolio Section Styling */
+.portfolio-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px; /* Adjust the padding for top-bottom and sides */
+    background-color: #ffffff; /* White background */
+    margin-top: 100px; /* Adjust to start just below the navbar */
+    max-width: 1200px; /* Limit the section's width */
+    margin-left: auto; /* Center the section horizontally */
+    margin-right: auto; /* Center the section horizontally */
+}
+
+/* Portfolio Left (Heading) */
+.portfolio-left h2 {
+    font-family: 'Argent', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+/* Portfolio Right (Paragraphs) */
+.portfolio-right {
+    text-align: right;
+}
+
+.portfolio-right p {
+    font-family: 'Argent', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .portfolio-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portfolio-left h2 {
+        margin-bottom: 20px;
+    }
+
+    .portfolio-right {
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    /* Show the hamburger icon */
+    .navbar-toggle {
+        display: block;
+    }
+
+    /* Hide the social icons */
+    .navbar-social {
+        display: none;
+    }
+
+    /* Hide the menu links by default */
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        background-color: #fff;
+        text-align: right;
+        gap: 0;
+    }
+
+    .navbar-menu a {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        display: block;
+    }
+
+    .navbar-menu.show {
+        display: block;
+    }
+
+    /* Hero section adjustments */
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero-btn {
+        font-size: 16px;
+    }
+    .service-item {
+        flex-basis: 100%; /* Single item per row on mobile screens */
+    }
+}

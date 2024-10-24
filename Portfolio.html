@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage&Style</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="assets/1.png" alt="StageSmart Logo">
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+        <div class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>  <!-- Link to index.html -->
+            <a href="aboutus.html">About</a>  <!-- Link to aboutus.html -->
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="#quote">Request a Quote</a>
+        </div>
+        <div class="navbar-social">
+            <a href="https://www.instagram.com"><img src="assets/insta.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com"><img src="assets/facebook.png" alt="Facebook"></a>
+        </div>
+    </nav>
+    
+    <section class="portfolio-section">
+        <div class="portfolio-left">
+            <h2>Portfolio</h2>
+        </div>
+        <div class="portfolio-right">
+            <p>View our recently staged and interior decorated homes</p>
+            <p>in Niagara and across the GTA.</p>
+        </div>
+    </section>
+    <section class="imm">
+        <div class="image-grid">
+            <img src="assets/11.jpeg" alt="Image 1">
+            <img src="assets/11.jpeg" alt="Image 2">
+            <img src="assets/11.jpeg" alt="Image 3">
+            <img src="assets/11.jpeg" alt="Image 4">
+            <img src="assets/11.jpeg" alt="Image 5">
+            <img src="assets/11.jpeg" alt="Image 6">
+            <img src="assets/11.jpeg" alt="Image 7">
+            <img src="assets/11.jpeg" alt="Image 8">
+            <img src="assets/11.jpeg" alt="Image 9">
+            <img src="assets/11.jpeg" alt="Image 10">
+            <img src="assets/11.jpeg" alt="Image 11">
+            <img src="assets/11.jpeg" alt="Image 12">
+        </div>
+    </section>
+    
+    
+
+<section class="intro-section">
+    <div class="intro-section-content">
+        <h2>Make Your Space Look It’s Absolute Best</h2>
+        <p>Are you looking for a home staging expert in the Niagara Region? Contact us today to get started!</p>
+        <a href="#services" class="intro-btn">Contact Us</a>
+    </div>
+</section>
+<section class="contact-section">
+    <h1 class="contact-heading">Contact</h1>
+    <p class="contact-info">Email: info<span class="at-symbol">@</span>stageandstyle.com</p>
+
+
+
+
+    <p class="contact-info">Cell: 365&#8209;76&#8209;8787</p>
+
+    <p class="contact-info">Address: Niagara Falls Ontario Canada</p>
+</section>
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('navbar-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>
