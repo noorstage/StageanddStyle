@@ -626,6 +626,11 @@ p {
     font-size: 1.2em; /* Adjust the font size for the contact info */
     margin: 10px 0; /* Adds space between sentences */
 }
+.hyphen {
+    font-family: Arial, sans-serif; /* Fallback font for the hyphen */
+    font-weight: bold;
+}
+
 .abt-section {
     display: flex;
     justify-content: space-between;
