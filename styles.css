@@ -206,7 +206,10 @@ body {
     font-weight: 300;
     margin: 20px 0;
 }
-
+.number{
+    font-family: 'Argent', sans-serif;
+    font-weight: normal;
+}
 .hero-btn {
     padding: 15px 30px;
     border: 2px solid #ffffff;
@@ -641,12 +644,14 @@ p {
 }
 
 .contact-info {
+    
     font-size: 1.2em; /* Adjust the font size for the contact info */
     margin: 10px 0; /* Adds space between sentences */
 }
+
 .hyphen {
     font-family: Arial, sans-serif; /* Fallback font for the hyphen */
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .abt-section {
