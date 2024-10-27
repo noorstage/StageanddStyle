@@ -122,13 +122,15 @@ body {
 
 .navbar-logo img {
     height: 130px;
+    
 }
 
 /* Menu items */
 .navbar-menu {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
+    
 }
 
 .navbar-menu a {
@@ -141,7 +143,7 @@ body {
 }
 
 .navbar-menu a:hover {
-    color: #00b7c4;
+    color: #949090;
 }
 
 /* Social icons section */
@@ -160,6 +162,22 @@ body {
     display: none;
     font-size: 30px;
     cursor: pointer;
+}
+.ser1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Minimal padding for spacing */
+    background-color: black;
+    color: white;
+    margin-top: 180px; /* Space to clear the fixed navbar */
+}
+
+.service-heading {
+    font-family: 'Argent CF', sans-serif; /* Ensure font is loaded */
+    font-size: 36px; /* Reduced font size for nominal appearance */
+    text-align: center;
+    margin: 0; /* Remove default margin */
 }
 
 /* Hero Section Styling */
@@ -825,7 +843,52 @@ p {
     }
 }
 
+.serv {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+.serite {
+    text-align: center;
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    max-width: 150px;
+}
+
+.serite img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.serite p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+    margin: 0;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .serv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .serite {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+}
 
 
 
