@@ -283,93 +283,130 @@ body {
 
 /* Services Grid Layout */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
-    gap: 30px;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Service Item (Card) Styling */
-.service-item {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+.service-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.service-block {
+    flex: 1;
+    max-width: 500px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    cursor: pointer;
+    position: relative;
+    top: 0;
 }
 
-.service-item:hover {
-    transform: translateY(-10px); /* Elevates card on hover */
+.service-block:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Larger shadow */
+    background: linear-gradient(to bottom, #fff, #f8f8f8); /* Subtle gradient */
 }
 
-/* Figure and Image Styling */
-figure {
-    margin: 0;
-}
-
-figure img {
+.service-block img {
     width: 100%;
-    max-width: 600px;
-    height: 200px; /* Fixed image size */
-    object-fit: cover; /* Ensures the image fills the area without distortion */
-    border-radius: 8px; /* Rounded corners for images */
-}
-
-/* Heading and Text Styling */
-h3 {
-    font-family: 'Argent', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 20px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Smooth transition for image */
 }
 
-p {
-    font-family: 'Argent', sans-serif;
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #555;
-}
-.at-symbol {
-    font-family: 'Proxima Nova', sans-serif; /* The alternative font for @ */
+.service-block:hover img {
+    transform: scale(1.03); /* Slight zoom effect on image */
 }
 
-/* Button Styling */
-.service-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Argent', sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.service-block h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    min-height: 3.6rem; /* Ensures title heights are consistent */
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+    transition: color 0.3s ease; /* Smooth transition for text color */
 }
 
-.service-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-    border: 2px solid #000000;
+.service-block:hover h3 {
+    color: #8B4513; /* Brown color on hover - matches your brand */
+}
+
+.service-block p {
+    flex-grow: 1;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #666;
+}
+
+.service-row.centered {
+    justify-content: center;
+}
+
+.service-row.centered .service-block {
+    flex: 0 1 500px;
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+@media (max-width: 992px) {
+    .service-row {
+        gap: 20px;
+    }
+    
+    .service-block {
+        padding: 20px;
+    }
+    
+    .service-block img {
+        height: 180px;
+    }
+    
+    .service-block h3 {
+        font-size: 1.3rem;
     }
 }
 
 @media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* 1 column on small screens */
+    .service-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-block {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .service-block img {
+        height: 200px;
     }
 }
+
+@media (max-width: 480px) {
+    .service-block img {
+        height: 160px;
+    }
+    
+    .service-block h3 {
+        font-size: 1.2rem;
+        min-height: auto;
+    }
+}
+
 /* General Styling for Testimonials Section */
 .testimonials {
     background-color: #fff;
