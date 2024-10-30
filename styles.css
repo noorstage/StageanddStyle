@@ -674,60 +674,109 @@ p {
 /* Image grid styling */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 images per row on larger screens */
-    gap: 0; /* No gap between the images */
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .image-grid img {
     width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* Ensures images cover the space equally */
-    cursor: pointer; /* Change cursor to pointer for clickable images */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Responsive Design for Smaller Screens */
+.image-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet Responsiveness */
 @media (max-width: 1024px) {
     .image-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on medium screens */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .image-grid img {
+        height: 280px;
+    }
+
+    .portfolio h2 {
+        font-size: 28px;
     }
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .image-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .image-grid img {
+        height: 250px;
+    }
+
+    .portfolio h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
     }
 }
 
+/* Small Mobile Devices */
 @media (max-width: 480px) {
     .image-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 image per row on extra small screens */
+        gap: 1rem;
+        padding: 0.75rem;
+    }
+
+    .image-grid img {
+        height: 200px;
+        border-radius: 8px;
+    }
+
+    .portfolio h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
     }
 }
 
 /* Modal styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
-    justify-content: center; /* Center the image */
-    align-items: center; /* Center the image */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 
 .modal img {
-    max-width: 90%; /* Responsive image */
-    max-height: 90%; /* Responsive image */
-    object-fit: contain; /* Maintain aspect ratio */
-    margin: auto; /* Center the image */
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    margin: auto;
 }
 
+/* Modal Responsiveness */
+@media (max-width: 768px) {
+    .modal img {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+}
 
 .intro-section {
     display: flex;
@@ -1258,4 +1307,73 @@ p {
         bottom: 20px;
         right: 20px;
     }
+}
+
+/* Image Effects and Responsiveness */
+.hover-effect {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hover-effect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hover-effect:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .abt-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .abt-content, .abt-image {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .about-founder-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .founder-image, .founder-text {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .founder-image {
+        max-height: 400px;
+    }
+}
+
+/* Existing image styles update */
+.abt-image, .founder-image {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.abt-image img, .founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.abt-image {
+    padding: 20px;
 }
