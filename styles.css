@@ -1617,3 +1617,8 @@ p {
         height: 18px;
     }
 }
+
+.logo {
+    width: 200px;  /* Adjust size as needed */
+    margin-bottom: 2rem;
+}
