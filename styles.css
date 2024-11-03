@@ -961,15 +961,17 @@ p {
     text-align: left; /* Ensures text aligns to the left for better readability */
 }
 
-.founder-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
 .founder-image {
     flex: 1;
     padding: 20px;
+    max-width: 300px; /* Match image width */
+    margin: 0 auto; /* Centers the frame */
+}
+
+.founder-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
 }
 
 .founder-text {
@@ -1102,20 +1104,22 @@ p {
 @media (max-width: 768px) {
     /* Navbar container adjustments */
     .navbar {
-        padding: 15px 20px;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        padding: 10px; /* Reduced padding */
+        min-height: 60px; /* Reduced height */
     }
 
     /* Logo adjustments */
     .navbar-logo img {
-        height: 100px;
+        max-height: 40px; /* Smaller logo */
+        width: auto;
     }
 
     /* Show the hamburger icon */
     .navbar-toggle {
         display: block;
         order: 3; /* Places hamburger after social icons */
+        font-size: 20px; /* Smaller hamburger menu icon */
+        padding: 5px 10px;
     }
 
     /* Social icons container */
@@ -1127,8 +1131,9 @@ p {
     }
 
     .navbar-social img {
-        width: 22px;
-        height: 22px;
+        width: 25px; /* Smaller social icons */
+        height: 25px;
+        margin: 0 5px;
     }
 
     /* Menu adjustments */
@@ -1146,7 +1151,8 @@ p {
     }
 
     .navbar-menu a {
-        padding: 15px;
+        padding: 8px 15px; /* Reduced padding for menu items */
+        font-size: 14px; /* Smaller font for menu items */
         border-bottom: 1px solid #ddd;
         width: 100%;
     }
@@ -1563,5 +1569,158 @@ p {
     .intro-section-content p {
         font-size: 16px;
         padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-logo img {
+        height: 80px; /* Increased from 40px */
+        width: auto;
+    }
+
+    /* Menu positioning adjustment to account for larger logo */
+    .navbar-menu {
+        top: 100px; /* Adjusted to prevent overlap with larger logo */
+    }
+
+    .navbar-toggle {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .navbar-social {
+        gap: 10px;
+    }
+
+    .navbar-social img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .navbar-logo img {
+        height: 70px; /* Slightly smaller for very small screens */
+    }
+
+    .navbar-social {
+        gap: 8px;
+    }
+
+    .navbar-social img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.logo {
+    width: 200px;  /* Adjust size as needed */
+    margin-bottom: 2rem;
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.divider-line {
+    height: 1px;
+    background-color: #000;
+    width: 100%;
+    opacity: 0.2;
+}
+
+.portfolio-contact-details {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.contact-block {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-block:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.portfolio-contact-info {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .contact-block {
+        padding: 15px;
+    }
+    
+    .contact-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio-contact-details {
+        gap: 15px;
+    }
+
+    .contact-block {
+        padding: 12px;
+    }
+    
+    .contact-icon {
+        font-size: 1rem;
+    }
+}
+
+.about-contact-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid #000;
+}
+
+.about-contact-btn:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .about-contact-btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
     }
 }

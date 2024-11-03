@@ -5,36 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request a Quote - Stage&Style</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         .quote-container {
-            min-height: 70vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 6rem 2rem 4rem 2rem;
+            margin-top: 80px;
             background-color: #f5f5f5;
-            margin: 20px 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
         }
 
         .quote-content {
-            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            top: 20px;
+        }
+
+        .quote-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .quote-content p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: #666;
             margin-bottom: 2rem;
         }
 
         .quote-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #000000;
+            padding: 12px 30px;
+            border-radius: 10px;
+            background-color: #333;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
         }
 
         .quote-button:hover {
-            background-color: #333333;
+            background-color: #444;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .quote-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 15px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .phone-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #333333;
+        }
+
+        .form-group input:invalid,
+        .form-group textarea:invalid {
+            border-color: #ff3e3e;
+        }
+
+        .form-group input:focus:invalid,
+        .form-group textarea:focus:invalid {
+            border-color: #ff3e3e;
+            box-shadow: 0 0 0 2px rgba(255, 62, 62, 0.2);
+        }
+
+        .form-group input:valid,
+        .form-group textarea:valid {
+            border-color: #4CAF50;
+        }
+
+        .required-text {
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Style for validation messages */
+        input:invalid:not(:placeholder-shown),
+        textarea:invalid:not(:placeholder-shown) {
+            background-color: #fff6f6;
+        }
+
+        /* Add responsive styles */
+        @media screen and (max-width: 768px) {
+            .quote-container {
+                padding: 5rem 1rem 3rem 1rem;
+                margin-top: 60px;
+            }
+
+            .quote-content {
+                padding: 2rem;
+                top: 10px;
+            }
+
+            .quote-form {
+                padding: 0 10px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .quote-button {
+                padding: 12px 25px;
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .quote-container {
+                padding: 4rem 0.5rem 2rem 0.5rem;
+            }
+
+            .quote-content {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .phone-group select {
+                padding: 10px 12px;
+            }
+
+            .quote-content h1 {
+                font-size: 24px;
+            }
+
+            .quote-content p {
+                font-size: 14px;
+            }
+        }
+
+        .phone-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .phone-group select {
+            width: 120px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .phone-group input {
+            flex: 1;
+        }
+
+        .phone-group select:focus {
+            outline: none;
+            border-color: #333333;
+        }
+
+        /* Responsive styles for phone group */
+        @media screen and (max-width: 480px) {
+            .phone-group {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .phone-group select {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -59,7 +240,7 @@
         </div>
         <div class="navbar-social">
             <a href="https://www.instagram.com/stageandstyle__/profilecard/?igsh=MXJyNTY0cGJpaTF3bA=="><img src="assets/insta.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/profile.php?id=61565645172649&mibextid=JRoKGi"><img src="assets/facebook.png" alt="Facebook"></a>
+            <a href="https://www.facebook.com/profile.php?id=61565645172649&mibextid=JRoKGi"><img src="assets/face.png" alt="Facebook"></a>
         </div>
     </nav>
 
@@ -67,8 +248,64 @@
     <div class="quote-container">
         <div class="quote-content">
             <h1>Request a Quote</h1>
-            <p>Ready to transform your space? Fill out our quick form to get started with a personalized quote.</p>
-            <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="quote-button">Get a Quote</a>
+            <p>Ready to transform your space? Fill out the form below to get started with a personalized quote.</p>
+            
+            <form class="quote-form" action="https://formsubmit.co/styleandstage08@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Quote Request from Stage&Style">
+                <input type="hidden" name="_next" value="Thankyou.html">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <input type="text" 
+                           id="name" 
+                           name="name" 
+                           placeholder="Full Name *" 
+                           required 
+                           oninvalid="this.setCustomValidity('Please enter your full name')"
+                           oninput="this.setCustomValidity('')">
+                </div>
+                <div class="form-group">
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           placeholder="Email Address *" 
+                           required
+                           oninvalid="this.setCustomValidity('Please enter a valid email address')"
+                           oninput="this.setCustomValidity('')">
+                </div>
+                <div class="form-group phone-group">
+                    <select name="countryCode" id="countryCode" required>
+                        <option value="+91">+91 (IN)</option>
+                        <option value="+1">+1 (US/CA)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <option value="+61">+61 (AU)</option>
+                        <option value="+65">+65 (SG)</option>
+                        <option value="+971">+971 (UAE)</option>
+                        <option value="+86">+86 (CN)</option>
+                        <option value="+81">+81 (JP)</option>
+                        <option value="+49">+49 (DE)</option>
+                        <option value="+33">+33 (FR)</option>
+                    </select>
+                    <input type="tel" 
+                           id="phone" 
+                           name="phone" 
+                           placeholder="Contact Number *" 
+                           pattern="[0-9]{10}"
+                           required
+                           oninvalid="this.setCustomValidity('Please enter a valid 10-digit phone number')"
+                           oninput="this.setCustomValidity('')">
+                </div>
+                <div class="form-group">
+                    <textarea id="address" 
+                              name="address" 
+                              placeholder="Your Address *" 
+                              required
+                              oninvalid="this.setCustomValidity('Please enter your address')"
+                              oninput="this.setCustomValidity('')"></textarea>
+                </div>
+                <p class="required-text">* Required fields</p>
+                <button type="submit" class="quote-button">Submit Request</button>
+            </form>
         </div>
     </div>
 
@@ -99,5 +336,7 @@
         <img src="assets/WhatsApp.png" alt="WhatsApp Chat" />
     </a>
 
+    <!-- Add this before closing body tag if not already present -->
+    <script src="script.js"></script>
 </body>
 </html>
