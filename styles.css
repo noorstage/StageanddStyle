@@ -961,15 +961,17 @@ p {
     text-align: left; /* Ensures text aligns to the left for better readability */
 }
 
-.founder-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
 .founder-image {
     flex: 1;
     padding: 20px;
+    max-width: 300px; /* Match image width */
+    margin: 0 auto; /* Centers the frame */
+}
+
+.founder-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
 }
 
 .founder-text {
@@ -1102,20 +1104,22 @@ p {
 @media (max-width: 768px) {
     /* Navbar container adjustments */
     .navbar {
-        padding: 15px 20px;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        padding: 10px; /* Reduced padding */
+        min-height: 60px; /* Reduced height */
     }
 
     /* Logo adjustments */
     .navbar-logo img {
-        height: 100px;
+        max-height: 40px; /* Smaller logo */
+        width: auto;
     }
 
     /* Show the hamburger icon */
     .navbar-toggle {
         display: block;
         order: 3; /* Places hamburger after social icons */
+        font-size: 20px; /* Smaller hamburger menu icon */
+        padding: 5px 10px;
     }
 
     /* Social icons container */
@@ -1127,8 +1131,9 @@ p {
     }
 
     .navbar-social img {
-        width: 22px;
-        height: 22px;
+        width: 25px; /* Smaller social icons */
+        height: 25px;
+        margin: 0 5px;
     }
 
     /* Menu adjustments */
@@ -1146,7 +1151,8 @@ p {
     }
 
     .navbar-menu a {
-        padding: 15px;
+        padding: 8px 15px; /* Reduced padding for menu items */
+        font-size: 14px; /* Smaller font for menu items */
         border-bottom: 1px solid #ddd;
         width: 100%;
     }
@@ -1563,5 +1569,51 @@ p {
     .intro-section-content p {
         font-size: 16px;
         padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-logo img {
+        height: 80px; /* Increased from 40px */
+        width: auto;
+    }
+
+    /* Menu positioning adjustment to account for larger logo */
+    .navbar-menu {
+        top: 100px; /* Adjusted to prevent overlap with larger logo */
+    }
+
+    .navbar-toggle {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .navbar-social {
+        gap: 10px;
+    }
+
+    .navbar-social img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .navbar-logo img {
+        height: 70px; /* Slightly smaller for very small screens */
+    }
+
+    .navbar-social {
+        gap: 8px;
+    }
+
+    .navbar-social img {
+        width: 18px;
+        height: 18px;
     }
 }
