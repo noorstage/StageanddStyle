@@ -40,3 +40,28 @@ function closeModal() {
     const modal = document.getElementById('modal');
     modal.style.display = "none"; // Hide the modal when clicked
 }
+
+// Form submission handler
+document.addEventListener('DOMContentLoaded', function() {
+    const quoteForm = document.querySelector('.quote-form');
+    if (quoteForm) {  // Check if form exists on the page
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create email body
+            const emailBody = `
+                Name: ${data.name}
+                Email: ${data.email}
+                Phone: ${data.countryCode} ${data.phone}
+                Address: ${data.address}
+            `;
+            
+            // Open email client
+            window.location.href = `mailto:styleandstage08@gmail.com?subject=Quote Request from ${data.name}&body=${encodeURIComponent(emailBody)}`;
+        });
+    }
+});
