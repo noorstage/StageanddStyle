@@ -223,18 +223,16 @@ body {
     font-weight: normal;
 }
 .hero-btn {
-    padding: 15px 30px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    font-family: 'Argent', sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #4b2002; /* Set background color */
+    color: white; /* Set text color to white */
+    padding: 10px 20px; /* Add padding for better appearance */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Optional: for rounded corners */
+    transition: background-color 0.3s; /* Optional: for smooth hover effect */
 }
 
 .hero-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #3a1a00; /* Optional: darker shade on hover */
 }
 /* About Us Section Styling */
 .about-us {
@@ -865,9 +863,16 @@ p {
 }
 
 .abt-content {
-    max-width: 50%;
-    padding: 0 20px;
-    text-align: center; /* Centers only the text content */
+    text-align: center; /* Center-align text */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px; /* Add padding for spacing */
+}
+
+@media (max-width: 600px) {
+    .abt-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
 }
 
 /* Heading Styling */
@@ -953,25 +958,33 @@ p {
 
 .about-founder-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    max-width: 1200px;
-    text-align: left; /* Ensures text aligns to the left for better readability */
+    text-align: center;
 }
 
 .founder-image {
-    flex: 1;
-    padding: 20px;
-    max-width: 300px; /* Match image width */
-    margin: 0 auto; /* Centers the frame */
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    overflow: hidden;
 }
 
-.founder-image img {
+.founder-img {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    object-fit: cover;
+}
+
+@media (min-width: 600px) {
+    .about-founder-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .founder-image {
+        margin-right: 20px;
+    }
 }
 
 .founder-text {
@@ -986,7 +999,7 @@ p {
     line-height: 1.6;
     margin-bottom: 15px;
     color: #333;
-    font-weight: normal; /* Ensures the text is not bold */
+    font-weight: normal;
 }
 
 /* Adjusts layout for smaller screens */
@@ -1723,4 +1736,33 @@ p {
         padding: 10px 25px;
         font-size: 0.95rem;
     }
+}
+
+.text-background {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and opacity as needed */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 10px; /* Optional: for rounded corners */
+}
+
+.intro-contact-section {
+    color: #4b2002; /* Change text color for all text within this section */
+}
+
+.intro-contact-section a {
+    color: #4b2002; /* Ensure links also have the same color */
+}
+
+.intro-box {
+    background-color: #f0f0f0; /* Background color for the box */
+    border: 2px solid #d2b48c; /* Light brown border color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    text-align: center; /* Center the text inside the box */
+    margin: 20px 0; /* Margin for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+.intro-box h2 {
+    color: #4b2002; /* Text color for the heading */
+    margin: 0; /* Remove default margin */
 }
