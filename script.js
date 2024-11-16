@@ -6,6 +6,10 @@ showTime();
 setInterval(function () {
     showTime();
 }, 1000);
+// JavaScript for Toggle Functionality
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const testimonialContent = document.querySelector('.testimonial-content');
