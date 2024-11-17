@@ -1766,3 +1766,29 @@ p {
     color: #4b2002; /* Text color for the heading */
     margin: 0; /* Remove default margin */
 }
+
+footer {
+    background-color: #000000; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding for spacing */
+}
+
+footer p {
+    margin: 5px 0; /* Margin for spacing */
+}
+
+footer a {
+    color: white; /* White links */
+    text-decoration: none; /* No underline */
+    margin: 0 10px; /* Margin between links */
+    font-size: 18px; /* Font size */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer i {
+    margin-right: 5px; /* Space between icon and text */
+}
