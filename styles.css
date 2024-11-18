@@ -100,12 +100,10 @@
 body {
     font-family: 'Argent', sans-serif;
     background-color: #fff;
-    color: #4b2002;
+    color: #333;
 }
 
 /* Navigation bar styling */
-/* Navbar Container */
-/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -122,28 +120,22 @@ body {
     font-weight: 400;
 }
 
-/* Logo Styling */
 .navbar-logo img {
     height: 130px;
+    
 }
 
-/* Hamburger Icon (Mobile) */
-.navbar-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Menu Items (Desktop View) */
+/* Menu items */
 .navbar-menu {
     display: flex;
     justify-content: center;
     gap: 20px;
+    
 }
 
 .navbar-menu a {
     text-decoration: none;
-    color: #4b2002;
+    color: #333;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -154,12 +146,17 @@ body {
     color: #949090;
 }
 
-/* Social Icons Section */
+/* Social icons section */
 .navbar-social {
     display: flex;
     gap: 15px;
     align-items: center;
     margin-right: 20px;
+}
+
+.navbar-social a {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-social img {
@@ -172,88 +169,12 @@ body {
     transform: scale(1.1);
 }
 
-/* Dropdown Menu for Mobile */
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding: 10px 15px;
-    }
-
-    .navbar-logo img {
-        height: 80px;
-        width: auto;
-    }
-
-    .navbar-toggle {
-        display: block;
-    }
-
-    /* Dropdown Menu Hidden by Default */
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-        align-items: center; /* Center items vertically */
-        position: absolute;
-        top: 80px; /* Positioned below the logo */
-        right: 10px; /* Positioned on the right side of the page */
-        width: 60%;
-        background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
-        padding: 10px 0;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .navbar-menu a {
-        padding: 12px 0;
-        font-size: 16px;
-        text-align: center; /* Center text */
-        width: 100%; /* Full width for easy clicking */
-        color: #4b2002;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .navbar-menu a:last-child {
-        border-bottom: none;
-    }
-
-    .navbar-menu a:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-        color: #949090;
-    }
-
-    .navbar-menu.show {
-        display: flex;
-    }
-
-    .navbar-social {
-        gap: 10px;
-    }
-
-    .navbar-social img {
-        width: 25px;
-        height: 25px;
-    }
+/* Hamburger Icon for mobile */
+.navbar-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
-
-/* Extra Small Devices */
-@media (max-width: 320px) {
-    .navbar-logo img {
-        height: 70px;
-    }
-
-    .navbar-social {
-        gap: 8px;
-    }
-
-    .navbar-social img {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-
-
 .ser1 {
     display: flex;
     justify-content: center;
@@ -326,7 +247,6 @@ body {
 
 .about-us h2 {
     font-family: 'Argent', sans-serif;
-    color: #4b2002;
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -334,7 +254,6 @@ body {
 
 .about-us p {
     font-family: 'Argent', sans-serif;
-    color: #4b2002;
     font-size: 18px;
     max-width: 800px;
     line-height: 1.6;
@@ -347,7 +266,7 @@ body {
     padding: 20px 100px; /* Increased padding for long width */
     background-color: #ffffff; /* Default white color */
     border: 2px solid #000000; /* Black border */
-    color: #4b2002;; /* Black text */
+    color: #000000; /* Black text */
     font-family: 'Argent', sans-serif;
     font-size: 20px;
     text-decoration: none;
@@ -381,7 +300,6 @@ body {
 
 .staging-services h2 {
     font-family: 'Argent', sans-serif;
-    color: #4b2002;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 40px;
@@ -416,7 +334,6 @@ body {
 /* Figure and Image Styling */
 figure {
     margin: 0;
-    color: #4b2002;
 }
 
 figure img {
@@ -430,7 +347,6 @@ figure img {
 /* Heading and Text Styling */
 h3 {
     font-family: 'Argent', sans-serif;
-    color: #4b2002;
     font-size: 22px;
     font-weight: bold;
     margin-top: 20px;
@@ -439,10 +355,9 @@ h3 {
 
 p {
     font-family: 'Argent', sans-serif;
-    
     font-size: 16px;
     margin-bottom: 20px;
-    color: #4b2002;;
+    color: #555;
 }
 .at-symbol {
     font-family: 'Proxima Nova', sans-serif; /* The alternative font for @ */
@@ -463,7 +378,7 @@ p {
 
 .service-btn:hover {
     background-color: #ffffff;
-    color: #4b2002;;
+    color: #000000;
     border: 2px solid #000000;
 }
 
@@ -671,7 +586,7 @@ p {
     padding: 15px 0;
     background-color: #ffffff;
     border: 2px solid #000000;
-    color: #4b2002;;
+    color: #000000;
     font-family: 'Argent', sans-serif;
     font-size: 18px;
     text-decoration: none;
@@ -1670,7 +1585,51 @@ p {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
 
+    .navbar-logo img {
+        height: 80px; /* Increased from 40px */
+        width: auto;
+    }
+
+    /* Menu positioning adjustment to account for larger logo */
+    .navbar-menu {
+        top: 100px; /* Adjusted to prevent overlap with larger logo */
+    }
+
+    .navbar-toggle {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .navbar-social {
+        gap: 10px;
+    }
+
+    .navbar-social img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .navbar-logo img {
+        height: 70px; /* Slightly smaller for very small screens */
+    }
+
+    .navbar-social {
+        gap: 8px;
+    }
+
+    .navbar-social img {
+        width: 18px;
+        height: 18px;
+    }
+}
 
 .logo {
     width: 200px;  /* Adjust size as needed */
@@ -1807,5 +1766,29 @@ p {
     color: #4b2002; /* Text color for the heading */
     margin: 0; /* Remove default margin */
 }
-/* Navbar styles for larger screens */
 
+footer {
+    background-color: #000000; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding for spacing */
+}
+
+footer p {
+    margin: 5px 0; /* Margin for spacing */
+}
+
+footer a {
+    color: white; /* White links */
+    text-decoration: none; /* No underline */
+    margin: 0 10px; /* Margin between links */
+    font-size: 18px; /* Font size */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer i {
+    margin-right: 5px; /* Space between icon and text */
+}
