@@ -90,7 +90,6 @@
     font-style: italic;
 }
 
-/* Reset basic styles */
 * {
     margin: 0;
     padding: 0;
@@ -103,7 +102,6 @@ body {
     color: #333;
 }
 
-/* Navigation bar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -125,7 +123,7 @@ body {
     
 }
 
-/* Menu items */
+
 .navbar-menu {
     display: flex;
     justify-content: center;
@@ -146,7 +144,6 @@ body {
     color: #949090;
 }
 
-/* Social icons section */
 .navbar-social {
     display: flex;
     gap: 15px;
@@ -169,7 +166,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Hamburger Icon for mobile */
 .navbar-toggle {
     display: none;
     font-size: 30px;
@@ -179,20 +175,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px; /* Minimal padding for spacing */
+    padding: 40px 20px; 
     background-color: black;
     color: white;
-    margin-top: 180px; /* Space to clear the fixed navbar */
+    margin-top: 180px; 
 }
 
 .service-heading {
-    font-family: 'Argent CF', sans-serif; /* Ensure font is loaded */
-    font-size: 36px; /* Reduced font size for nominal appearance */
+    font-family: 'Argent CF', sans-serif; 
+    font-size: 36px; 
     text-align: center;
-    margin: 0; /* Remove default margin */
+    margin: 0; 
 }
 
-/* Hero Section Styling */
+
 .hero {
     height: 60vh;
     background: url('assets\\9.JPG') center/cover no-repeat;
@@ -202,7 +198,7 @@ body {
     text-align: center;
     color: #ffffff;
     padding: 20px;
-    margin-top: 100px; /* This offset is added to account for the fixed navbar */
+    margin-top: 100px; 
 }
 
 .hero h1 {
@@ -223,18 +219,19 @@ body {
     font-weight: normal;
 }
 .hero-btn {
-    background-color: #4b2002; /* Set background color */
-    color: white; /* Set text color to white */
-    padding: 10px 20px; /* Add padding for better appearance */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Optional: for rounded corners */
-    transition: background-color 0.3s; /* Optional: for smooth hover effect */
+    background-color: #4b2002;
+    color: white;
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
 }
 
 .hero-btn:hover {
-    background-color: #3a1a00; /* Optional: darker shade on hover */
+    background-color: #3a1a00; 
+    
 }
-/* About Us Section Styling */
+
 .about-us {
     display: flex;
     justify-content: center;
@@ -260,12 +257,12 @@ body {
     margin-bottom: 40px;
 }
 
-/* About Us Button - long width and color change */
+
 .about-btn {
     display: inline-block;
-    padding: 20px 100px; /* Increased padding for long width */
-    background-color: #ffffff; /* Default white color */
-    border: 2px solid #000000; /* Black border */
+    padding: 20px 100px; 
+    background-color: #ffffff;
+    border: 2px solid #000000; 
     color: #000000; /* Black text */
     font-family: 'Argent', sans-serif;
     font-size: 20px;
@@ -274,24 +271,11 @@ body {
 }
 
 .about-btn:hover {
-    background-color: #000000; /* Turn background black on hover */
-    color: #ffffff; /* Turn text white on hover */
-}
-/* General Styles */
-/* .staging-services {
-    background-color: #f9f9f9;
-    padding: 60px 0;
-    text-align: center;
+    background-color: #000000; 
+    color: #ffffff; 
 }
 
-.staging-services h2 {
-    font-family: 'Argent', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
 
-/* Services Grid Layout */
 .staging-services {
     background-color: #f9f9f9;
     padding: 60px 0;
@@ -305,7 +289,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Services Grid Layout */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
@@ -314,7 +298,7 @@ body {
     margin: 0 auto;
 }
 
-/* Service Item (Card) Styling */
+
 .service-item {
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
@@ -328,10 +312,11 @@ body {
 }
 
 .service-item:hover {
-    transform: translateY(-10px); /* Elevates card on hover */
+    transform: translateY(-10px); 
+    
 }
 
-/* Figure and Image Styling */
+
 figure {
     margin: 0;
 }
@@ -339,12 +324,11 @@ figure {
 figure img {
     width: 100%;
     max-width: 600px;
-    height: 200px; /* Fixed image size */
-    object-fit: cover; /* Ensures the image fills the area without distortion */
-    border-radius: 8px; /* Rounded corners for images */
+    height: 200px; 
+    object-fit: cover;    
+    border-radius: 8px; 
+    
 }
-
-/* Heading and Text Styling */
 h3 {
     font-family: 'Argent', sans-serif;
     font-size: 22px;
