@@ -118,6 +118,11 @@ body {
     font-weight: 400;
 }
 
+.navbar-logo {
+    text-align: center;
+    flex: 5;
+}
+
 .navbar-logo img {
     height: 130px;
     
