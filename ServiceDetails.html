@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage & Style</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="padding-top: 200px;">
+    <nav class="navbar" style="position: fixed; width: 100%; top: 0; z-index: 1000; background-color: white;">
+        <div class="navbar-logo">
+            <img src="assets/1.png" alt="StageSmart Logo">
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+        <div class="navbar-menu" id="navbar-menu">
+            <a href="index.html" style="color: #4b2002;">Home</a> 
+            <!-- <a href="aboutus.html" style="color: #4b2002;">About</a>   -->
+            <a href="Portfolio.html" style="color: #4b2002;">Portfolio</a>
+            <a href="Servicee.html" style="color: #4b2002;">Service</a>
+            <a href="Quote.html" style="color: #4b2002;">Request a Quote</a>
+        </div>
+    </nav>
+    
+    <section class="interactive-services" style="margin-bottom: 60px;">
+        <h2 style="color: #4b2002; margin-bottom: 60px;">Service Details</h2>
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <div class="service-item" style="width: 48%; border: 1px solid #ccc; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
+                <h3 style="color: #4b2002;">Airbnb and Home Staging</h3>
+                <p style="color: #4b2002;">    Transform your rental property into a guest magnet with:<br>
+
+                    I. Furniture selection and arrangement to maximize space and functionality.<br>
+                    II. Decor styling with artwork, rugs, and accessories to enhance ambiance.<br>
+                    III. Lighting optimization for a warm, inviting glow.<br>
+                    IV. Professional photography setup assistance for standout listings.</p>
+            </div>
+            <div class="service-item" style="width: 48%; border: 1px solid #ccc; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
+                <h3 style="color: #4b2002;">Interior Designing and Decorating</h3>
+                <p style="color: #4b2002;">    Create spaces that truly reflect your style with:.<br>
+
+                    I. Custom space planning and layout designs.<br>
+                    II. Furniture, fabric, and decor selection tailored to your preferences.<br>
+                    III. Color palette creation for a cohesive look.<br>
+                    IV. Integration of functional elements like storage and lighting.</p>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <div class="service-item" style="width: 48%; border: 1px solid #ccc; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
+                <h3 style="color: #4b2002;">Accent Walls and Wallpaper Installation</h3>
+                <p style="color: #4b2002;">    Add character and charm to your rooms with:<br>
+
+                    I. Accent wall design consultation to suit your space and style.<br>
+                    II. High-quality wallpaper selection and seamless installation.<br>
+                    III. Custom-painted designs for a personalized touch.<br>
+                    IV. Texture and finish options, including faux finishes and paneling..</p>
+            </div>
+            <div class="service-item" style="width: 48%; border: 1px solid #ccc; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
+                <h3 style="color: #4b2002;">House Painting and Handyman Services</h3>
+                <p style="color: #4b2002;">    Give your home a refreshed look with:<br>
+
+                    I. Interior and exterior wall painting using premium paints.<br>
+                    II. Touch-ups and repairs, including wall patching and sanding.<br>
+                    III. Handyman services for minor fixes like door hinges, shelves, or fixtures.<br>
+                    IV. Detailed clean-up post-service to leave your space spotless.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <h1 class="contact-heading" style="color: #4b2002;">CONTACT</h1>
+        <p class="contact-info" style="color: #4b2002;">EMAIL: styleandstage08<span class="at-symbol">@</span>gmail.com</p>
+        <p class="contact-info" style="color: #4b2002;">PHONE: 
+            <span class="number" style="color: #4b2002;">
+                365<span class="hyphen" style="color: #4b2002;">-</span><span class="hyphen">4</span>76<span class="hyphen">-</span>8787
+            </span>
+        </p>
+        <p class="contact-info" style="color: #4b2002;">ADDRESS: Niagara Falls, Ontario, Canada</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Stage and Style. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="https://wa.me/13654768787" target="_blank">
+                <i class="fab fa-whatsapp"></i> 
+            </a>, 
+            <a href="https://www.instagram.com/stageandstyle__/profilecard/?igsh=MXJyNTY0cGJpaTF3bA==" target="_blank">
+                <i class="fab fa-instagram"></i> 
+            </a>, 
+            <a href="https://www.facebook.com/profile.php?id=61565645172649&mibextid=JRoKGi" target="_blank">
+                <i class="fab fa-facebook"></i> 
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('navbar-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+
+        function shuffleGrid() {
+            const grid = document.getElementById('services-grid');
+            const items = Array.from(grid.children);
+            items.sort(() => Math.random() - 0.5);
+            items.forEach(item => grid.appendChild(item));
+        }
+
+        document.addEventListener('DOMContentLoaded', shuffleGrid);
+    </script>
+
+</body>
+</html>
+
+
