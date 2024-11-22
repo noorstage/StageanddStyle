@@ -101,12 +101,18 @@ body {
     background-color: #fff;
     color: #333;
 }
-
+/* Global Styles */
+/* Global Styles */
+/* Global Styles */
+/* Global Styles */
+/* Global Styles (unchanged for big screens) */
+/* Global Styles (unchanged for big screens) */
+/* Global Styles (unchanged for big screens) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
     position: fixed;
@@ -119,21 +125,21 @@ body {
 }
 
 .navbar-logo {
-    text-align: center;
-    flex: 5;
+    padding-left: 20px;
 }
 
 .navbar-logo img {
-    height: 130px;
-    
+    height: 130px; /* Default height for big screens */
+    max-width: 100%; /* Ensure image fits within its container */
+    object-fit: contain; /* Preserve aspect ratio */
 }
-
 
 .navbar-menu {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     gap: 20px;
-    
+    padding-right: 20px;
 }
 
 .navbar-menu a {
@@ -149,33 +155,90 @@ body {
     color: #949090;
 }
 
-.navbar-social {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.navbar-social a {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-social img {
-    width: 25px;
-    height: 25px;
-    transition: transform 0.2s;
-}
-
-.navbar-social img:hover {
-    transform: scale(1.1);
-}
-
 .navbar-toggle {
     display: none;
     font-size: 30px;
     cursor: pointer;
 }
+
+/* Small Screens: Adjusted Logo Size */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 15px; /* Increased padding for more vertical space */
+        height: 150px; /* Increased navbar height */
+    }
+
+    .navbar-logo {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-logo img {
+        height: 150px; /* Larger logo for small screens */
+        max-width: none; /* Allow image to grow beyond container's width */
+        object-fit: contain; /* Maintain aspect ratio */
+    }
+
+    .navbar-toggle {
+        display: block;
+        font-size: 30px; /* Larger hamburger menu */
+        cursor: pointer;
+        align-self: center;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 420px; /* Adjusted for the larger navbar height */
+        left: 0;
+        border-top: 1px solid #ddd;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+/* Extra Small Screens (Further Spacing Adjustments) */
+@media (max-width: 320px) {
+    .navbar {
+        padding: 50px 10px; /* Increased padding for very small screens */
+        height: 600px; /* Further increased navbar height */
+    }
+
+    .navbar-logo img {
+        height: 500px; /* Very large logo */
+        max-width: none; /* Remove width constraint */
+        object-fit: contain; /* Maintain aspect ratio */
+    }
+
+    .navbar-toggle {
+        font-size: 60px; /* Further increased hamburger size */
+    }
+
+    .navbar-menu {
+        top: 620px; /* Adjusted for larger navbar height */
+    }
+}
+
+
+
+
+
+
+
+
 .ser1 {
     display: flex;
     justify-content: center;
@@ -1102,108 +1165,7 @@ p {
 
 
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    /* Navbar container adjustments */
-    .navbar {
-        padding: 10px; /* Reduced padding */
-        min-height: 60px; /* Reduced height */
-    }
 
-    /* Logo adjustments */
-    .navbar-logo img {
-        max-height: 40px; /* Smaller logo */
-        width: auto;
-    }
-
-    /* Show the hamburger icon */
-    .navbar-toggle {
-        display: block;
-        order: 3; /* Places hamburger after social icons */
-        font-size: 20px; /* Smaller hamburger menu icon */
-        padding: 5px 10px;
-    }
-
-    /* Social icons container */
-    .navbar-social {
-        display: flex;
-        order: 2; /* Places social icons before hamburger */
-        gap: 15px;
-        margin-right: 15px;
-    }
-
-    .navbar-social img {
-        width: 25px; /* Smaller social icons */
-        height: 25px;
-        margin: 0 5px;
-    }
-
-    /* Menu adjustments */
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 130px; /* Adjust based on your navbar height */
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        order: 4; /* Ensures menu appears below everything */
-    }
-
-    .navbar-menu a {
-        padding: 8px 15px; /* Reduced padding for menu items */
-        font-size: 14px; /* Smaller font for menu items */
-        border-bottom: 1px solid #ddd;
-        width: 100%;
-    }
-
-    /* When menu is active */
-    .navbar-menu.show {
-        display: flex;
-    }
-}
-
-/* Additional adjustments for very small screens */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 10px 15px;
-    }
-
-    .navbar-logo img {
-        height: 80px;
-    }
-
-    .navbar-social {
-        gap: 10px;
-    }
-
-    .navbar-social img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .navbar-menu {
-        top: 100px;
-    }
-}
-
-/* Extra small devices */
-@media (max-width: 320px) {
-    .navbar-logo img {
-        height: 70px;
-    }
-
-    .navbar-social {
-        gap: 8px;
-    }
-
-    .navbar-social img {
-        width: 18px;
-        height: 18px;
-    }
-}
 
 .service-row {
     display: flex;
@@ -1574,51 +1536,7 @@ p {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding: 10px 15px;
-    }
 
-    .navbar-logo img {
-        height: 80px; /* Increased from 40px */
-        width: auto;
-    }
-
-    /* Menu positioning adjustment to account for larger logo */
-    .navbar-menu {
-        top: 100px; /* Adjusted to prevent overlap with larger logo */
-    }
-
-    .navbar-toggle {
-        font-size: 20px;
-        padding: 5px 10px;
-    }
-
-    .navbar-social {
-        gap: 10px;
-    }
-
-    .navbar-social img {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-/* Extra small devices */
-@media (max-width: 320px) {
-    .navbar-logo img {
-        height: 70px; /* Slightly smaller for very small screens */
-    }
-
-    .navbar-social {
-        gap: 8px;
-    }
-
-    .navbar-social img {
-        width: 18px;
-        height: 18px;
-    }
-}
 
 .logo {
     width: 200px;  /* Adjust size as needed */
