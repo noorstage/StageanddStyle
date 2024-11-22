@@ -315,13 +315,11 @@
     </section>
 
     <script>
-        document.getElementById('navbar-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('navbar-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
+        const toggle = document.getElementById('navbar-toggle');
+        const menu = document.getElementById('navbar-menu');
+    
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
         });
     </script>
 
