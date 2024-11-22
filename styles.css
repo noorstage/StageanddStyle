@@ -198,7 +198,7 @@ body {
         background-color: #fff;
         width: 100%;
         position: absolute;
-        top: 420px; /* Adjusted for the larger navbar height */
+        top: 100%; /* Adjusted for the larger navbar height */
         left: 0;
         border-top: 1px solid #ddd;
         z-index: 999;
