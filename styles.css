@@ -123,6 +123,9 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
 
 .navbar-logo {
     padding-left: 20px;
