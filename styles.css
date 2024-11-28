@@ -247,7 +247,7 @@ hr.solid {
     justify-content: center;
     align-items: center;
     padding: 40px 20px; 
-    background-color: black;
+    background-color: #4b2002;
     color: white;
     margin-top: 180px; 
 }
@@ -422,7 +422,7 @@ p {
 .service-btn {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #000000;
+    background-color: #4b2002;
     color: #ffffff;
     font-family: 'Argent', sans-serif;
     font-size: 18px;
