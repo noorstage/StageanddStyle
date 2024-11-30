@@ -262,7 +262,7 @@ hr.solid {
 
 .hero {
     height: 60vh;
-    background: url('assets\\main_c.jpg') center/cover no-repeat;
+    background: url('assets\\main_c.jpg') center/cover no-repeat;   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1701,4 +1701,24 @@ footer a:hover {
 
 footer i {
     margin-right: 5px; /* Space between icon and text */
+}
+
+.about-founder-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the image and text */
+}
+
+.founder-image {
+    width: 100%; /* Ensures the div spans its container */
+    height: auto; /* Allows height to adjust proportionally */
+    overflow: hidden; /* Hides any overflowing parts */
+}
+
+.founder-image img {
+    width: 100%; /* Makes the image fit the width of the container */
+    height: auto; /* Maintains the image's aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container fully */
+    display: block; /* Removes any extra whitespace below the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
 }
